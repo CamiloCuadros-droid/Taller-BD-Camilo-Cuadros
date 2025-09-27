@@ -17,7 +17,7 @@ router.post("/register", async (req, res) => {
   try {
     await db.connectToDb();
 
-    // ciframos la contraseña con nuestro método
+    // ciframos la contraseña 
     const encryptedPassword = cipher.encrypt(password);
 
     await db.query(
